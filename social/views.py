@@ -11,6 +11,9 @@ def feed(request):
 	context = { 'posts': posts}
 	return render(request, 'social/feed.html', context)
 
+def about(request):
+	return render(request, 'social/about.html')
+
 def register(request):
 	if request.method == 'POST':
 		form = UserRegisterForm(request.POST)
